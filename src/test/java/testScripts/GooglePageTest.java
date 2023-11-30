@@ -23,7 +23,7 @@ public class GooglePageTest {
 		System.out.println("URL...." + driver.getCurrentUrl());
 		driver.navigate().back();
 		System.out.println("Title..." + driver.getTitle());
-		driver.navigate().forward();
+//		driver.navigate().forward();
 
 	}
 

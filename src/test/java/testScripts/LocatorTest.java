@@ -15,7 +15,7 @@ public class LocatorTest {
 		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("SuperSecretPassword!");
 //		driver.findElement(By.className("radius")).click();
 		driver.findElement(By.xpath("//i[@class='fa fa-2x fa-sign-in']")).click();
-//		driver.findElement(By.linkText("Elemental Selenium")).click();
+		driver.findElement(By.linkText("Elemental Selenium")).click();
 //		driver.findElement(By.partialLinkText("Elemental")).click();
 
 	}
