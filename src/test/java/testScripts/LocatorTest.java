@@ -14,8 +14,11 @@ public class LocatorTest {
 		driver.findElement(By.xpath("//input[@id='username']")).sendKeys("tomsmith");
 		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("SuperSecretPassword!");
 //		driver.findElement(By.className("radius")).click();
-		driver.findElement(By.xpath("//i[@class='fa fa-2x fa-sign-in']")).click();
+		driver.findElement(By.cssSelector(".radius")).click();
+//		driver.findElement(By.xpath("//i[@class='fa fa-2x fa-sign-in']")).click();
 		driver.findElement(By.linkText("Elemental Selenium")).click();
+		String strUrl = driver.findElement(By.linkText("Elemental Selenium")).getAttribute("href");
+		System.out.println("Link URL...." + strUrl);
 //		driver.findElement(By.partialLinkText("Elemental")).click();
 
 	}
