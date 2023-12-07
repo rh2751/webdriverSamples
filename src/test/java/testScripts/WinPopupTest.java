@@ -5,6 +5,7 @@ import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class WinPopupTest {
@@ -20,6 +21,11 @@ public class WinPopupTest {
 		tabBtn.click();
 		Set<String> tabs = driver.getWindowHandles();
 		System.out.println("Number of windows...." + tabs.size());
+		
+		//New Selenium 4 feature - switch & open the link in new tab/window simultaneously
+		driver.switchTo().newWindow(WindowType.TAB);
+//		driver.switchTo().newWindow(WindowType.WINDOW);
+		driver.get("https://www.google.com/");
 		
 		for(String child:tabs) {
 			System.out.println("Windows..." + child);
